@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    // Directory Settings
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Module System
+    "module": "ES2020",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    
+    // Module Resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    
+    // Output Options
+    "sourceMap": true,
+    "declaration": true,
+    
+    // Strict Type Checking (good for code quality!)
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    
+    // Recommended Options
+    "skipLibCheck": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
