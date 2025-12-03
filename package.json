@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Implementation of the Factory Method Patter for ASE at DHBW Stuttgart",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -13,12 +16,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Terikyy/factory-method-pattern-ase/issues"
   },
   "homepage": "https://github.com/Terikyy/factory-method-pattern-ase#readme",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6"
   }
 }

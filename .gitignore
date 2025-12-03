@@ -8,6 +8,7 @@ build/
 
 # BUT: Keep configuration files
 !jest.config.js
+!vite.config.js
 
 # Dependencies
 node_modules/
