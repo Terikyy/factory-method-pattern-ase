@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Exporter - Factory Method Pattern</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title-row">
+                <h1>Document Exporter</h1>
+                <p class="subtitle">Factory Method Pattern Demonstration</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="layout-grid">
+                <div class="editor-section">
+                    <div class="section-header">
+                        <h2>Markdown Input</h2>
+                    </div>
+                    <textarea 
+                        id="markdown-input" 
+                        placeholder="Enter your Markdown text here...&#10;&#10;Try:&#10;# This is a heading&#10;## This is a subheading&#10;**This is bold text**&#10;*This is italic text*&#10;&#10;This is a regular paragraph."
+                        rows="15"
+                    ></textarea>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-section">
+                        <h3>Supported Markdown Syntax</h3>
+                        <div class="syntax-examples">
+                            <div class="syntax-item">
+                                <code># Heading 1</code>
+                                <span class="syntax-desc">Large heading</span>
+                            </div>
+                            <div class="syntax-item">
+                                <code>## Heading 2</code>
+                                <span class="syntax-desc">Subheading</span>
+                            </div>
+                            <div class="syntax-item">
+                                <code>**bold text**</code>
+                                <span class="syntax-desc">Bold formatting</span>
+                            </div>
+                            <div class="syntax-item">
+                                <code>*italic text*</code>
+                                <span class="syntax-desc">Italic formatting</span>
+                            </div>
+                        </div>
+                        <p class="info-note">
+                            Each export format handles Markdown differently:
+                            <strong>TXT</strong> removes formatting, 
+                            <strong>PDF</strong> applies styled typography, 
+                            <strong>DOCX</strong> converts to Word styles.
+                        </p>
+                    </div>
+
+                    <div class="export-section">
+                        <div class="export-controls">
+                            <div class="control-group">
+                                <label for="format-select">Export Format</label>
+                                <select id="format-select">
+                                    <option value="txt">Plain Text (.txt)</option>
+                                    <option value="pdf" selected>PDF Document (.pdf)</option>
+                                    <option value="docx">Word Document (.docx)</option>
+                                </select>
+                            </div>
+                            <button id="export-button" class="export-btn">
+                                <span class="btn-icon">⬇</span>
+                                Export Document
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="output-section" class="output-section hidden">
+                <h3>Export Result</h3>
+                <div id="output-content" class="output-content"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Advanced Software Engineering - Factory Method Pattern Implementation</p>
+        </footer>
+    </div>
+
+    <script type="module" src="dist/index.js"></script>
+</body>
+</html>
