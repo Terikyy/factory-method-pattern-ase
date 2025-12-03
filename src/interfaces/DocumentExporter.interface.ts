@@ -17,6 +17,7 @@ export interface DocumentExporter {
      * 3. Trigger a download in the browser
      * 
      * @param content - Markdown formatted text to export
+     * @returns Promise that resolves when export is complete
      */
-    export(content: string): void;
+    export(content: string): void | Promise<void>;
 }
